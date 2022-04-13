@@ -28,7 +28,7 @@ Wait patiently for the build to complete, and inspect the results.
 cd release-build
 cat release.info
 cat test.log
-./rippled -v
+./rippled --version
 ```
 
 This `rippled` binary should be highly portable and can be copied directly onto most x64 linux systems without any further dependencies.
