@@ -2,14 +2,14 @@
 which docker 2> /dev/null 2> /dev/null
 if [ "$?" -eq "1" ]
 then
-  echo Docker not found. Install it first.
+  echo 'Docker not found. Install it first.'
   exit 1
 fi
 
 stat .git 2> /dev/null 2> /dev/null
 if [ "$?" -eq "1" ]
 then
-  echo Run this inside the rippled directory. (.git dir not found).
+  echo 'Run this inside the rippled directory. (.git dir not found).'
   exit 1
 fi
 docker run -t -i --rm  -v `pwd`:/io --network host ghcr.io/foobarwidget/holy-build-box-x64 /hbb_exe/activate-exec bash -x -c '
