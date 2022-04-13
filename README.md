@@ -1,5 +1,6 @@
 # Rippled Release Builder
 This is a cross-distro staticly linked release builder for rippled. It is designed to produce rippled binaries that will "run anywhere with no dependencies."
+It is built on [The Holy Build Box](https://github.com/phusion/holy-build-box).
 
 ## How to use
 First clone the rippled repo into a directory on your system if you haven't already.
