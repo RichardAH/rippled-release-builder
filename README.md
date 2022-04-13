@@ -16,7 +16,7 @@ git reset --hard HEAD
 ```
 
 Now run the release builder:
-*Note: This **will** remove `release-build` directory if it already exists.*
+*Note: This **will** remove `./release-build` directory if it already exists.*
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/RichardAH/rippled-release-builder/main/release-builder.sh)
 ```
