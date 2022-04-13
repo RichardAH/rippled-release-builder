@@ -42,15 +42,16 @@ export Boost_LIBRARY_DIRS="/usr/local/lib" &&
 export BOOST_INCLUDEDIR="/usr/local/src/boost_1_75_0" &&
 cmake .. -DBoost_NO_BOOST_CMAKE=ON &&
 make -j8 &&
+strip -s rippled &&
 echo "Build host: `hostname`" > release.info &&
 echo "Build date: `date`" >> release.info &&
+echo "Build md5: `md5sum rippled`" >> release.info &&
 echo "Git remotes:" >> release.info && 
 git remote -v >> release.info 
 echo "Git status:" >> release.info &&
 git status -v >> release.info &&
 echo "Git log [last 20]:" >> release.info &&
-git log -n 20 >> release.info &&
-strip -s rippled;
+git log -n 20 >> release.info;
 ./rippled -u > test.log;
 cd .. &&
 sed -E -i "s/^#(include.deps\/Rocksdb.)$/\1/g" CMakeLists.txt'
