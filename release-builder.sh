@@ -76,9 +76,5 @@ echo "Git status:" >> release.info &&
 git status -v >> release.info &&
 echo "Git log [last 20]:" >> release.info &&
 git log -n 20 >> release.info;
-./rippled -u > test.log;
 cd .. &&
 sed -E -i "s/^#(include.deps\/Rocksdb.)$/\1/g" CMakeLists.txt'
-
-
-
